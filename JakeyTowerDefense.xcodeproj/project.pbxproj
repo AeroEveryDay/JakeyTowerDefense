@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6935B2951BAA14A900611A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935B2941BAA14A900611A20 /* AppDelegate.swift */; };
+		6935B2971BAA14A900611A20 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6935B2961BAA14A900611A20 /* GameScene.sks */; };
+		6935B2991BAA14A900611A20 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935B2981BAA14A900611A20 /* GameScene.swift */; };
+		6935B29B1BAA14A900611A20 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935B29A1BAA14A900611A20 /* GameViewController.swift */; };
+		6935B29E1BAA14A900611A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6935B29C1BAA14A900611A20 /* Main.storyboard */; };
+		6935B2A01BAA14A900611A20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6935B29F1BAA14A900611A20 /* Images.xcassets */; };
+		6935B2A31BAA14A900611A20 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6935B2A11BAA14A900611A20 /* LaunchScreen.xib */; };
+		6935B2AF1BAA14A900611A20 /* JakeyTowerDefenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6935B2A91BAA14A900611A20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6935B2871BAA14A900611A20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6935B28E1BAA14A900611A20;
+			remoteInfo = JakeyTowerDefense;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6935B28F1BAA14A900611A20 /* JakeyTowerDefense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JakeyTowerDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6935B2931BAA14A900611A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6935B2941BAA14A900611A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6935B2961BAA14A900611A20 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		6935B2981BAA14A900611A20 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		6935B29A1BAA14A900611A20 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		6935B29D1BAA14A900611A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6935B29F1BAA14A900611A20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6935B2A21BAA14A900611A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6935B2A81BAA14A900611A20 /* JakeyTowerDefenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JakeyTowerDefenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6935B2AD1BAA14A900611A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JakeyTowerDefenseTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6935B28C1BAA14A900611A20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6935B2A51BAA14A900611A20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6935B2861BAA14A900611A20 = {
+			isa = PBXGroup;
+			children = (
+				6935B2911BAA14A900611A20 /* JakeyTowerDefense */,
+				6935B2AB1BAA14A900611A20 /* JakeyTowerDefenseTests */,
+				6935B2901BAA14A900611A20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6935B2901BAA14A900611A20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6935B28F1BAA14A900611A20 /* JakeyTowerDefense.app */,
+				6935B2A81BAA14A900611A20 /* JakeyTowerDefenseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6935B2911BAA14A900611A20 /* JakeyTowerDefense */ = {
+			isa = PBXGroup;
+			children = (
+				6935B2941BAA14A900611A20 /* AppDelegate.swift */,
+				6935B2961BAA14A900611A20 /* GameScene.sks */,
+				6935B2981BAA14A900611A20 /* GameScene.swift */,
+				6935B29A1BAA14A900611A20 /* GameViewController.swift */,
+				6935B29C1BAA14A900611A20 /* Main.storyboard */,
+				6935B29F1BAA14A900611A20 /* Images.xcassets */,
+				6935B2A11BAA14A900611A20 /* LaunchScreen.xib */,
+				6935B2921BAA14A900611A20 /* Supporting Files */,
+			);
+			path = JakeyTowerDefense;
+			sourceTree = "<group>";
+		};
+		6935B2921BAA14A900611A20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6935B2931BAA14A900611A20 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6935B2AB1BAA14A900611A20 /* JakeyTowerDefenseTests */ = {
+			isa = PBXGroup;
+			children = (
+				6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */,
+				6935B2AC1BAA14A900611A20 /* Supporting Files */,
+			);
+			path = JakeyTowerDefenseTests;
+			sourceTree = "<group>";
+		};
+		6935B2AC1BAA14A900611A20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6935B2AD1BAA14A900611A20 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6935B28E1BAA14A900611A20 /* JakeyTowerDefense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6935B2B21BAA14A900611A20 /* Build configuration list for PBXNativeTarget "JakeyTowerDefense" */;
+			buildPhases = (
+				6935B28B1BAA14A900611A20 /* Sources */,
+				6935B28C1BAA14A900611A20 /* Frameworks */,
+				6935B28D1BAA14A900611A20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JakeyTowerDefense;
+			productName = JakeyTowerDefense;
+			productReference = 6935B28F1BAA14A900611A20 /* JakeyTowerDefense.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6935B2A71BAA14A900611A20 /* JakeyTowerDefenseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6935B2B51BAA14A900611A20 /* Build configuration list for PBXNativeTarget "JakeyTowerDefenseTests" */;
+			buildPhases = (
+				6935B2A41BAA14A900611A20 /* Sources */,
+				6935B2A51BAA14A900611A20 /* Frameworks */,
+				6935B2A61BAA14A900611A20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6935B2AA1BAA14A900611A20 /* PBXTargetDependency */,
+			);
+			name = JakeyTowerDefenseTests;
+			productName = JakeyTowerDefenseTests;
+			productReference = 6935B2A81BAA14A900611A20 /* JakeyTowerDefenseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6935B2871BAA14A900611A20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Jacob Wall";
+				TargetAttributes = {
+					6935B28E1BAA14A900611A20 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6935B2A71BAA14A900611A20 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 6935B28E1BAA14A900611A20;
+					};
+				};
+			};
+			buildConfigurationList = 6935B28A1BAA14A900611A20 /* Build configuration list for PBXProject "JakeyTowerDefense" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6935B2861BAA14A900611A20;
+			productRefGroup = 6935B2901BAA14A900611A20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6935B28E1BAA14A900611A20 /* JakeyTowerDefense */,
+				6935B2A71BAA14A900611A20 /* JakeyTowerDefenseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6935B28D1BAA14A900611A20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6935B2A31BAA14A900611A20 /* LaunchScreen.xib in Resources */,
+				6935B2A01BAA14A900611A20 /* Images.xcassets in Resources */,
+				6935B2971BAA14A900611A20 /* GameScene.sks in Resources */,
+				6935B29E1BAA14A900611A20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6935B2A61BAA14A900611A20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6935B28B1BAA14A900611A20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6935B2991BAA14A900611A20 /* GameScene.swift in Sources */,
+				6935B29B1BAA14A900611A20 /* GameViewController.swift in Sources */,
+				6935B2951BAA14A900611A20 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6935B2A41BAA14A900611A20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6935B2AF1BAA14A900611A20 /* JakeyTowerDefenseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6935B2AA1BAA14A900611A20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6935B28E1BAA14A900611A20 /* JakeyTowerDefense */;
+			targetProxy = 6935B2A91BAA14A900611A20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6935B29C1BAA14A900611A20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6935B29D1BAA14A900611A20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6935B2A11BAA14A900611A20 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6935B2A21BAA14A900611A20 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6935B2B01BAA14A900611A20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6935B2B11BAA14A900611A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6935B2B31BAA14A900611A20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JakeyTowerDefense/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6935B2B41BAA14A900611A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JakeyTowerDefense/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6935B2B61BAA14A900611A20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JakeyTowerDefenseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JakeyTowerDefense.app/JakeyTowerDefense";
+			};
+			name = Debug;
+		};
+		6935B2B71BAA14A900611A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JakeyTowerDefenseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JakeyTowerDefense.app/JakeyTowerDefense";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6935B28A1BAA14A900611A20 /* Build configuration list for PBXProject "JakeyTowerDefense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6935B2B01BAA14A900611A20 /* Debug */,
+				6935B2B11BAA14A900611A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6935B2B21BAA14A900611A20 /* Build configuration list for PBXNativeTarget "JakeyTowerDefense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6935B2B31BAA14A900611A20 /* Debug */,
+				6935B2B41BAA14A900611A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6935B2B51BAA14A900611A20 /* Build configuration list for PBXNativeTarget "JakeyTowerDefenseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6935B2B61BAA14A900611A20 /* Debug */,
+				6935B2B71BAA14A900611A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6935B2871BAA14A900611A20 /* Project object */;
+}
