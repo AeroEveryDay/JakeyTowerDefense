@@ -15,6 +15,7 @@
 		6935B2A01BAA14A900611A20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6935B29F1BAA14A900611A20 /* Images.xcassets */; };
 		6935B2A31BAA14A900611A20 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6935B2A11BAA14A900611A20 /* LaunchScreen.xib */; };
 		6935B2AF1BAA14A900611A20 /* JakeyTowerDefenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */; };
+		69FB93331BAC92E300C89F35 /* Towers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FB93321BAC92E300C89F35 /* Towers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6935B2A81BAA14A900611A20 /* JakeyTowerDefenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JakeyTowerDefenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6935B2AD1BAA14A900611A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JakeyTowerDefenseTests.swift; sourceTree = "<group>"; };
+		69FB93321BAC92E300C89F35 /* Towers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Towers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				6935B2941BAA14A900611A20 /* AppDelegate.swift */,
 				6935B2961BAA14A900611A20 /* GameScene.sks */,
 				6935B2981BAA14A900611A20 /* GameScene.swift */,
+				69FB93321BAC92E300C89F35 /* Towers.swift */,
 				6935B29A1BAA14A900611A20 /* GameViewController.swift */,
 				6935B29C1BAA14A900611A20 /* Main.storyboard */,
 				6935B29F1BAA14A900611A20 /* Images.xcassets */,
@@ -222,6 +225,7 @@
 				6935B2991BAA14A900611A20 /* GameScene.swift in Sources */,
 				6935B29B1BAA14A900611A20 /* GameViewController.swift in Sources */,
 				6935B2951BAA14A900611A20 /* AppDelegate.swift in Sources */,
+				69FB93331BAC92E300C89F35 /* Towers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +421,7 @@
 				6935B2B41BAA14A900611A20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6935B2B51BAA14A900611A20 /* Build configuration list for PBXNativeTarget "JakeyTowerDefenseTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				6935B2B71BAA14A900611A20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
