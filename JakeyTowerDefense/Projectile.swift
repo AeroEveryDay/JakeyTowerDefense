@@ -12,13 +12,10 @@ import SpriteKit
 class Projectile {
     var damage: Float = 0
     var size: Float = 0
-    var x: CGFloat
-    var y: CGFloat
     var color: SKColor
     
-    init(damage: Float, size: Float, x: CGFloat, y: CGFloat, color: SKColor){
-        self.x = x
-        self.y = y
+    init(damage: Float, size: Float, color: SKColor){
+
         self.size = size
         self.damage = damage
         self.color = color

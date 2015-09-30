@@ -9,16 +9,16 @@
 import Foundation
 import SpriteKit
 
-class Towers{
+ class Towers{
     var tower:SKShapeNode
     var strength: Float = 0
     var speed: Float = 0
-    var range: Float = 0
+    var range: CGFloat = 0
     var size: CGFloat = 0
     var color: SKColor
     var name: String = ""
     
-    init(name: String, speed: Float, range: Float, size: Float, color: SKColor, tower: SKShapeNode, x: CGFloat, y: CGFloat){
+    init(name: String, speed: Float, range: CGFloat, size: Float, color: SKColor, tower: SKShapeNode, x: CGFloat, y: CGFloat){
         self.name = name
         self.speed = speed
         self.range = range
@@ -26,6 +26,8 @@ class Towers{
         self.color = color
     }
  
+    
+    
 }//Tower
 
 

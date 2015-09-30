@@ -20,7 +20,10 @@ enum ColliderType:UInt32{
     case Enemy = 2
     case Projectile = 3
     case Wall = 4
+    case Shooter = 5
 }
+
+
 
 
 func + (left: CGPoint, right: CGPoint) -> CGPoint {
@@ -46,7 +49,7 @@ func / (point: CGPoint, scalar: CGFloat) -> CGPoint {
     
 #endif
 
-func DistanceBetweenPoints(first: CGPoint, second: CGPoint) -> CGFloat{
+func getDistance(first: CGPoint, second: CGPoint) -> CGFloat{
     return (sqrt((((second.x - first.x)*(second.x - first.x))+((second.y - first.y)*(second.y - first.y)))))
 }
 
@@ -63,28 +66,81 @@ extension CGPoint {
 let level: Float = 1
 
 class GameScene: SKScene , SKPhysicsContactDelegate {
-    
+    let TowerCategory   : UInt32 = 0x1 << 0
+    let EnemyCategory : UInt32 = 0x1 << 1
+    let ProjectileCategory  : UInt32 = 0x1 << 2
+    let WallCategory : UInt32 = 0x1 << 3
+    let ShooterCategory : UInt32 = 0x1 << 4
+    let None : UInt32 = 0x1 << 5
+    var towers: [Towers] = []
+    var range: SKShapeNode = SKShapeNode(circleOfRadius: 0)
     
 
     
     override func didMoveToView(view: SKView) {
         physicsWorld.contactDelegate = self
         
-        addTower("Jakey", speed: 10, range: 100, x: frame.width/2, y: 200)
-        addTower("Carl Steepenz", speed: 10, range: 100, x: frame.width/2, y: 600)
+        addTower("Jakey", speed: 10, range: 300, x: frame.width/2, y: 200)
+        //addTower("Carl Steepenz", speed: 10, range: 100, x: frame.width/2, y: 600)
+        
         addEnemy("The Juicer", speed: 5, hp: 100, x: 0, y: 0)
         
+        addButton("addEnemy", height: 50, width: 100, x: 110, y: 45, color: SKColor.orangeColor())
+        addButton("addTower", height: 50, width: 100, x: 660, y: 45, color: SKColor.blueColor())
         
     }//didMoveToView
     
-    func shoot(shooter: SKNode, target: SKNode) {
+    func addButton(name: String?, height: CGFloat, width: CGFloat, x: CGFloat, y:CGFloat, color: SKColor){
+        var button = SKShapeNode(rectOfSize: CGSize(width: width, height: height))
+        button.fillColor = color
+        button.name = name
+        button.position.x = x
+        button.position.y = y
+        addChild(button)
+    }
+    
+    func newAddChild(node: SKNode){
+        addChild(node)
+    }
+   
+    func addShooter(name: String, tower: SKShapeNode, withinRange: CGFloat){
+        let shooter = SKShapeNode(circleOfRadius: withinRange)
+        shooter.fillColor = SKColor.grayColor()
+        shooter.alpha = 0.5
+        shooter.physicsBody = SKPhysicsBody(circleOfRadius: withinRange)
+        shooter.physicsBody?.affectedByGravity = false
+        shooter.physicsBody?.categoryBitMask = ShooterCategory
+        shooter.physicsBody?.contactTestBitMask =  EnemyCategory
+        shooter.physicsBody?.collisionBitMask = 0
+        shooter.position = tower.position
+        shooter.physicsBody?.usesPreciseCollisionDetection = true
+        shooter.physicsBody?.dynamic = true
+        addChild(shooter)
+        
+    }
+    
+    func shoot(target: SKNode, shooter: SKNode){
+        
+        let projectileNode = SKShapeNode(circleOfRadius: 10)
+        var projectile = Projectile(damage: 10, size: 10, color: SKColor.redColor())
+        
+        projectileNode.fillColor = projectile.color
+        projectileNode.position = shooter.position
+        
+        projectileNode.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+        projectileNode.physicsBody!.affectedByGravity = false
+        projectileNode.physicsBody?.categoryBitMask = ColliderType.Projectile.rawValue
+        projectileNode.physicsBody?.collisionBitMask = ColliderType.Enemy.rawValue
+        projectileNode.physicsBody?.collisionBitMask = ColliderType.Wall.rawValue
+        
+ 
+ 
+        addChild(projectileNode)
         
         // 3 - Determine offset of location to projectile
         let offset = minus(target.position, second: shooter.position)
         
         // 5 - OK to add now - you've double checked position
-        
-        addProjectile(20, x: shooter.position.x, y: shooter.position.y)
         
         // 6 - Get the direction of where to shoot
         let direction = offset.normalized()
@@ -98,33 +154,20 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         // 9 - Create the actions
         let actionMove = SKAction.moveTo(realDest, duration: 2.0)
         let actionMoveDone = SKAction.removeFromParent()
-        shooter.runAction(SKAction.sequence([actionMove, actionMoveDone]))
+        projectileNode.runAction(SKAction.sequence([actionMove, actionMoveDone]))
+        
         
     }
+ 
+  //  func getTarget(shooter: SKNode) -> SKNode{}
     
-    func addProjectile(damage: Float, x: CGFloat, y: CGFloat){
-        let projectileNode = SKShapeNode(circleOfRadius: 10)
-        var projectile = Projectile(damage: damage, size: 10, x: x, y: y, color: SKColor.redColor())
-        
-        projectileNode.fillColor = projectile.color
-        
-        projectileNode.physicsBody = SKPhysicsBody(circleOfRadius: 10)
-        projectileNode.physicsBody!.affectedByGravity = false
-        projectileNode.physicsBody?.categoryBitMask = ColliderType.Projectile.rawValue
-        projectileNode.physicsBody?.collisionBitMask = ColliderType.Enemy.rawValue
-        projectileNode.physicsBody?.collisionBitMask = ColliderType.Wall.rawValue
-        
-        projectileNode.position.x = x
-        projectileNode.position.y = y
-        addChild(projectileNode)
-        
-    }
-    
-    func addTower(name: String, speed: Float, range: Float, x: CGFloat, y:CGFloat){
+    func addTower(name: String, speed: Float, range: CGFloat, x: CGFloat, y:CGFloat){
         let towerNode = SKShapeNode(circleOfRadius: 25)
+        
         var tower = Towers(name: name, speed: 10, range: 100, size: 25, color: SKColor.blueColor(),tower: towerNode, x: x, y: y)
         towerNode.fillColor = tower.color
-        
+  
+        towers.append(tower)
         
         towerNode.physicsBody = SKPhysicsBody(circleOfRadius: 25)
         towerNode.physicsBody!.affectedByGravity = false
@@ -133,6 +176,8 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         
         towerNode.position.x = x
         towerNode.position.y = y
+        towerNode.physicsBody?.dynamic = false
+        addShooter(name, tower: towerNode, withinRange: range)
         addChild(towerNode)
     }
     
@@ -143,16 +188,17 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         
         enemyNode.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         enemyNode.physicsBody!.affectedByGravity = false
-        enemyNode.physicsBody?.categoryBitMask = ColliderType.Enemy.rawValue
-        enemyNode.physicsBody?.collisionBitMask = ColliderType.Projectile.rawValue
-        
+        enemyNode.physicsBody?.categoryBitMask = EnemyCategory
+        enemyNode.physicsBody?.contactTestBitMask = ShooterCategory
+        enemyNode.physicsBody?.collisionBitMask = 0
+        enemyNode.physicsBody?.usesPreciseCollisionDetection = true
+
         enemyNode.position.x = x
         enemyNode.position.y = y
+        enemyNode.physicsBody?.dynamic = true
         addChild(enemyNode)
         
         Paths(rider: enemyNode)
-        
-        
         
     }
     
@@ -164,14 +210,44 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     println("Projectile Hit: \(projectile.name) !")
     projectile.removeFromParent()
     //object.strokeColor = SKColor.redColor()
+        
+        
 
   
     }
+    
+    var touchCount: Float = 0
+    var addTowerCount: Float = 0
+    var toAddTower: Bool = false
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         // let touchCount = touches.count
         let touch = touches.first as! UITouch
         let location = touch.locationInNode(self)
-        addEnemy("The Juicer", speed: 5, hp: 100, x: 0, y: 0)
+        
+        touchCount+=1
+        addTowerCount = touchCount
+    
+        let node: SKNode = self.nodeAtPoint(location)
+        
+        if (node.name == ("addEnemy") && !toAddTower){
+            addEnemy("The Juicer", speed: 5, hp: 100, x: 0, y: 0)
+        }
+        
+        if (node.name == ("addTower")){
+            toAddTower = true
+            addTowerCount+=1
+          
+        }
+        println("addTowerCount: \(addTowerCount) touchCount: \(touchCount) toAddTower: \(toAddTower)")
+        
+        if(toAddTower && (touchCount == addTowerCount)){
+            addTower("Carl Steepenz", speed: 10, range: 100, x: location.x, y: location.y)
+            toAddTower = false
+        }
+        
+        
+      //  addEnemy("The Juicer", speed: 5, hp: 100, x: 0, y: 0)
         
         let position = touch.locationInNode(self)
         println("x: \(position.x)y: \(position.y)")
@@ -187,26 +263,44 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
-        let firstNode = contact.bodyA.node as! SKShapeNode
-        let secondNode = contact.bodyB.node as! SKShapeNode
         
-        print("Hit!")
+        var firstNode: SKPhysicsBody
+        var secondNode: SKPhysicsBody
         
-       /* if(contact.bodyA.categoryBitMask == PhysicsCategory.Circle) &&
-            (contact.bodyB.categoryBitMask == PhysicsCategory.Projectile){
-                projectileDidCollide(secondNode, object: firstNode )
-                let contactPoint = contact.contactPoint
-        */
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstNode = contact.bodyA
+            secondNode = contact.bodyB
+        } else {
+            firstNode = contact.bodyB
+            secondNode = contact.bodyA
         }
+        
+        let firstNodePosition: CGPoint = firstNode.node!.position
+        let secondNodePosition: CGPoint = secondNode.node!.position
+
+        
+        if ((firstNode.categoryBitMask == EnemyCategory) && (secondNode.categoryBitMask == ShooterCategory)) {
+            // println("hit")
+            // println(firstNode.node?.position)
+            // println(secondNode.node?.position)
+            shoot( firstNode.node!, shooter: secondNode.node!)
+            
+        }
+        
+        
+        
+   //     println("firstNode: \(firstNode.name)")
+     //   println("secondNode: \(secondNode.name)")
+
+        }
+    
     }//didBeginContact
-    
- /*   override func update(currentTime: NSTimeInterval) {
-       
-    }*/
-    
+
 //GameScene
 
-/*  override func update(currentTime: CFTimeInterval) {
-/* Called before each frame is rendered */
-}*/
+    func update(currentTime: CFTimeInterval) {
+
+        
+}
 

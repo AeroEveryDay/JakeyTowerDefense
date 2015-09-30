@@ -10,6 +10,5 @@ import Foundation
 import SpriteKit
 
 class Shooter{
-    
-       
+  
     }

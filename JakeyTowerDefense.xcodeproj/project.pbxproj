@@ -16,8 +16,7 @@
 		6935B2A01BAA14A900611A20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6935B29F1BAA14A900611A20 /* Images.xcassets */; };
 		6935B2A31BAA14A900611A20 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6935B2A11BAA14A900611A20 /* LaunchScreen.xib */; };
 		6935B2AF1BAA14A900611A20 /* JakeyTowerDefenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */; };
-		694059121BB60EC100E296EE /* GameScene.wift in Sources */ = {isa = PBXBuildFile; fileRef = 694059111BB60EC100E296EE /* GameScene.wift */; };
-		694271CA1BB4771F00913212 /* Shooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694271C91BB4771F00913212 /* Shooter.swift */; };
+		694271CA1BB4771F00913212 /* Shoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694271C91BB4771F00913212 /* Shoot.swift */; };
 		694271CC1BB4776700913212 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694271CB1BB4776700913212 /* GameScene.swift */; };
 		694271CE1BB477AE00913212 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694271CD1BB477AE00913212 /* Enemy.swift */; };
 		69FB93331BAC92E300C89F35 /* Towers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FB93321BAC92E300C89F35 /* Towers.swift */; };
@@ -47,8 +46,7 @@
 		6935B2A81BAA14A900611A20 /* JakeyTowerDefenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JakeyTowerDefenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6935B2AD1BAA14A900611A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JakeyTowerDefenseTests.swift; sourceTree = "<group>"; };
-		694059111BB60EC100E296EE /* GameScene.wift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GameScene.wift; sourceTree = "<group>"; };
-		694271C91BB4771F00913212 /* Shooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shooter.swift; sourceTree = "<group>"; };
+		694271C91BB4771F00913212 /* Shoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shoot.swift; sourceTree = "<group>"; };
 		694271CB1BB4776700913212 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		694271CD1BB477AE00913212 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		69FB93321BAC92E300C89F35 /* Towers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Towers.swift; sourceTree = "<group>"; };
@@ -98,10 +96,9 @@
 				694271CB1BB4776700913212 /* GameScene.swift */,
 				69FB93321BAC92E300C89F35 /* Towers.swift */,
 				690379EF1BB66354003EA179 /* Projectile.swift */,
-				694059111BB60EC100E296EE /* GameScene.wift */,
 				694271CD1BB477AE00913212 /* Enemy.swift */,
 				690379ED1BB66155003EA179 /* Path.swift */,
-				694271C91BB4771F00913212 /* Shooter.swift */,
+				694271C91BB4771F00913212 /* Shoot.swift */,
 				6935B29A1BAA14A900611A20 /* GameViewController.swift */,
 				6935B29C1BAA14A900611A20 /* Main.storyboard */,
 				6935B29F1BAA14A900611A20 /* Images.xcassets */,
@@ -242,10 +239,9 @@
 				6935B2951BAA14A900611A20 /* AppDelegate.swift in Sources */,
 				694271CE1BB477AE00913212 /* Enemy.swift in Sources */,
 				69FB93331BAC92E300C89F35 /* Towers.swift in Sources */,
-				694059121BB60EC100E296EE /* GameScene.wift in Sources */,
 				694271CC1BB4776700913212 /* GameScene.swift in Sources */,
 				690379EE1BB66155003EA179 /* Path.swift in Sources */,
-				694271CA1BB4771F00913212 /* Shooter.swift in Sources */,
+				694271CA1BB4771F00913212 /* Shoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
