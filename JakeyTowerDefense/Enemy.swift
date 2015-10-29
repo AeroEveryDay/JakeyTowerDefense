@@ -16,8 +16,10 @@ class Enemy{
     var speed: Float = 0
     var size: CGFloat = 0
     var path: [Float]
+    var num: Float
     
-    init(name: String, hp: Float, speed: Float, size: CGFloat, enemy: SKShapeNode, color: SKColor, x: CGFloat, y: CGFloat, path: [Float]){
+    init(num: Float, name: String, hp: Float, speed: Float, size: CGFloat, enemy: SKShapeNode, color: SKColor, x: CGFloat, y: CGFloat, path: [Float]){
+        self.num = num
         self.hp = hp
         self.name = name
         self.color = color

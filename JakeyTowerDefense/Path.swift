@@ -13,8 +13,9 @@ import SpriteKit
 
 class Paths {
     
+    
     init(rider: SKShapeNode){
- 
+        
         
         var path = CGPathCreateMutable()
         
@@ -26,11 +27,21 @@ class Paths {
         CGPathAddLineToPoint(path, nil, 350, 60)
         // CGPathAddArcToPoint(path, nil, <#x1: CGFloat#>, <#y1: CGFloat#>, <#x2: CGFloat#>, <#y2: CGFloat#>, <#radius: CGFloat#>)
         
+        let action: SKAction = SKAction.runBlock({
+            GameScene.enemyCount -= 1
+           // GameScene.enemies
+        })
         
        //execute path
-        var followLine = SKAction.followPath(path, asOffset: true, orientToPath: false, duration: 10.0)
-          rider.runAction(SKAction.sequence([followLine]))
+        var followLine = SKAction.followPath(path, asOffset: true, orientToPath: false, duration: 40.0)
+        let followLineDone = SKAction.removeFromParent()
+          rider.runAction(SKAction.sequence([followLine, followLineDone, action]))
+
         
+        
+       
     }
+    
+    
     
 }
