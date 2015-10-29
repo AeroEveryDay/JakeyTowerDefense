@@ -34,7 +34,7 @@ import SpriteKit
         self.tower = tower
         self.color = color
     }
- /*
+ 
     func objectsInRange(tower: SKPhysicsBody){
         
         for (object) in tower.allContactedBodies(){
@@ -73,7 +73,7 @@ import SpriteKit
 
         
     }
-    */
+    
 }//Tower
 
 
