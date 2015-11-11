@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
- class Towers{
+ class OldTowers{
     var tower:SKShapeNode
     var strength: Float = 0
     var speed: Float = 0
@@ -64,7 +64,7 @@ import SpriteKit
             println("closestEnemy: \(closestEnemy)")
             
             if enemiesInRange.count > 0{
-                GameScene.shoot(firstEnemy, shooter: tower.node!)
+               // GameScene.shoot(firstEnemy, shooter: tower.node!)
                 
                 //shoot(enemies[closestEnemy-1], shooter: tower.node!)
                 
@@ -73,7 +73,7 @@ import SpriteKit
 
         
     }
-    
+
 }//Tower
 
 
