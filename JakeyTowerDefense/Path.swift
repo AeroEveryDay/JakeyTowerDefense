@@ -14,10 +14,10 @@ import SpriteKit
 class Paths {
     
     
-    init(rider: SKShapeNode){
+    init(rider: SKShapeNode, speed: Double){
         
         
-        var path = CGPathCreateMutable()
+        let path = CGPathCreateMutable()
         
         CGPathMoveToPoint(path, nil, 20, 760)
         CGPathAddLineToPoint(path, nil, 400, 600)
@@ -33,7 +33,7 @@ class Paths {
         })
         
        //execute path
-        var followLine = SKAction.followPath(path, asOffset: true, orientToPath: false, duration: 40.0)
+        let followLine = SKAction.followPath(path, asOffset: true, orientToPath: false, duration: speed)
         let followLineDone = SKAction.removeFromParent()
           rider.runAction(SKAction.sequence([followLine, followLineDone, action]))
 

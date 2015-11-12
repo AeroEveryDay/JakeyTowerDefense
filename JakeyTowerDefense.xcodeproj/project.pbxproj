@@ -18,8 +18,8 @@
 		6935B2AF1BAA14A900611A20 /* JakeyTowerDefenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */; };
 		694271CA1BB4771F00913212 /* Shoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694271C91BB4771F00913212 /* Shoot.swift */; };
 		694271CC1BB4776700913212 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694271CB1BB4776700913212 /* GameScene.swift */; };
-		694271CE1BB477AE00913212 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694271CD1BB477AE00913212 /* Enemy.swift */; };
-		69FB93331BAC92E300C89F35 /* Towers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FB93321BAC92E300C89F35 /* Towers.swift */; };
+		6956E0211BE290D40004E22C /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6956E0201BE290D40004E22C /* Tower.swift */; };
+		6956E0251BE2A7C70004E22C /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6956E0241BE2A7C70004E22C /* Enemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,8 @@
 		6935B2AE1BAA14A900611A20 /* JakeyTowerDefenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JakeyTowerDefenseTests.swift; sourceTree = "<group>"; };
 		694271C91BB4771F00913212 /* Shoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shoot.swift; sourceTree = "<group>"; };
 		694271CB1BB4776700913212 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		694271CD1BB477AE00913212 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
-		69FB93321BAC92E300C89F35 /* Towers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Towers.swift; sourceTree = "<group>"; };
+		6956E0201BE290D40004E22C /* Tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tower.swift; path = ../Tower.swift; sourceTree = "<group>"; };
+		6956E0241BE2A7C70004E22C /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enemy.swift; path = ../Enemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +91,12 @@
 		6935B2911BAA14A900611A20 /* JakeyTowerDefense */ = {
 			isa = PBXGroup;
 			children = (
+				6956E0241BE2A7C70004E22C /* Enemy.swift */,
+				6956E0201BE290D40004E22C /* Tower.swift */,
 				6935B2941BAA14A900611A20 /* AppDelegate.swift */,
 				6935B2961BAA14A900611A20 /* GameScene.sks */,
 				694271CB1BB4776700913212 /* GameScene.swift */,
-				69FB93321BAC92E300C89F35 /* Towers.swift */,
 				690379EF1BB66354003EA179 /* Projectile.swift */,
-				694271CD1BB477AE00913212 /* Enemy.swift */,
 				690379ED1BB66155003EA179 /* Path.swift */,
 				694271C91BB4771F00913212 /* Shoot.swift */,
 				6935B29A1BAA14A900611A20 /* GameViewController.swift */,
@@ -177,6 +177,8 @@
 		6935B2871BAA14A900611A20 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Jacob Wall";
 				TargetAttributes = {
@@ -235,11 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				690379F01BB66354003EA179 /* Projectile.swift in Sources */,
+				6956E0251BE2A7C70004E22C /* Enemy.swift in Sources */,
 				6935B29B1BAA14A900611A20 /* GameViewController.swift in Sources */,
 				6935B2951BAA14A900611A20 /* AppDelegate.swift in Sources */,
-				694271CE1BB477AE00913212 /* Enemy.swift in Sources */,
-				69FB93331BAC92E300C89F35 /* Towers.swift in Sources */,
 				694271CC1BB4776700913212 /* GameScene.swift in Sources */,
+				6956E0211BE290D40004E22C /* Tower.swift in Sources */,
 				690379EE1BB66155003EA179 /* Path.swift in Sources */,
 				694271CA1BB4771F00913212 /* Shoot.swift in Sources */,
 			);

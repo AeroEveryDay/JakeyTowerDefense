@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Enemy{
+class OldEnemy{
     var name: String
     var hp: Float = 0
     var color: SKColor
